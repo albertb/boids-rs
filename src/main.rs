@@ -37,18 +37,18 @@ impl Default for Parameters {
         Self {
             window_width: 100.0,
             window_height: 100.0,
-            number_of_boids: 512,
-            view_distance: 75.0,
-            cohesion_force: 3.5,
-            separation_force: 2.0,
+            number_of_boids: 256,
+            view_distance: 60.0,
+            cohesion_force: 4.8,
+            separation_force: 2.2,
             separation_bias: 1.1,
-            alignment_force: 1.8,
-            alignment_bias: 1.5,
-            steering_force: 1.2,
-            fidelity: 0.9,
+            alignment_force: 6.8,
+            alignment_bias: 1.0,
+            steering_force: 1.0,
+            fidelity: 0.7,
             min_speed: 25.0,
-            max_speed: 150.0,
-            bounce_off_walls: false,
+            max_speed: 250.0,
+            bounce_off_walls: true,
         }
     }
 }
@@ -104,7 +104,7 @@ impl Calculations {
     }
 }
 
-const BIRD_SIZE: f32 = 2.0;
+const BIRD_SIZE: f32 = 1.0;
 
 fn setup(
     params: Res<Parameters>,
